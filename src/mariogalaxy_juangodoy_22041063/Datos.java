@@ -8,21 +8,22 @@ package mariogalaxy_juangodoy_22041063;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.io.EOFException;
+import javax.swing.JProgressBar;
 /**
  *
  * @author jcgol
  */
-public class Datos {
+public class Datos extends Thread{
 
     private ArrayList<Partida> partida = new ArrayList();
     private ArrayList<Estrella> estrella = new ArrayList();
     private ArrayList<Jugador> jugador = new ArrayList();
 
     //Crear Partidas 
-    public void crearPartida(String nombre) {
+    public void crearPartida(Object nombre) {
         for (int i = 0; partida.size() > i; i++) {
 
-            if (partida.get(i).getNombre().equalsIgnoreCase(nombre)) {
+            if (partida.get(i).getNombre().equals(nombre)) {
                 JOptionPane.showMessageDialog(null, "No se puede crear, ya existe");
                 return;
             }
@@ -31,10 +32,10 @@ public class Datos {
 
     }
 
-    public void editarPartida(String nombre) {
+    public void editarPartida(Object nombre) {
         for (int i = 0; i < partida.size(); i++) {
             if (partida.get(i).getNombre().equals(nombre)) {
-                partida.get(i).setNombre(nombre);
+                partida.get(i).setNombre(nombre.toString());
                 return;
             }
 
@@ -44,9 +45,9 @@ public class Datos {
 
     }
 
-    public void eliminarPartida(String nombre) {
+    public void eliminarPartida(Object nombre) {
         for (int i = 0; i < partida.size(); i++) {
-            if (partida.get(i).getNombre().equalsIgnoreCase(nombre)) {
+            if (partida.get(i).getNombre().equals(nombre)) {
                 partida.remove(i);
                 return;
             }
@@ -76,4 +77,56 @@ public class Datos {
         }
     }
     
+    private JProgressBar barra;
+    private boolean avanzar;
+    private boolean vive;
+
+    public Datos(JProgressBar barra) {
+        this.barra = barra;
+        avanzar=true;
+        vive=true;
+    }
+    
+    public boolean isVive() {
+        return vive;
+    }
+
+    public void setVive(boolean vive) {
+        this.vive = vive;
+    }
+
+
+    public boolean isAvanzar() {
+        return avanzar;
+    }
+
+    public void setAvanzar(boolean avanzar) {
+        this.avanzar = avanzar;
+    }
+
+
+    public JProgressBar getBarra() {
+        return barra;
+    }
+
+    public void setBarra(JProgressBar barra) {
+        this.barra = barra;
+    }
+    
+    @Override
+    public void run(){
+        while(vive){
+            if(avanzar){
+                barra.setValue(barra.getValue()+1);
+                if(barra.getValue()==100000000){
+                    vive=false;
+                }                
+            } //FIN IF
+            
+            try {
+                Thread.sleep(0);
+            } catch (InterruptedException ex) {
+            }
+        }
+    }
 }

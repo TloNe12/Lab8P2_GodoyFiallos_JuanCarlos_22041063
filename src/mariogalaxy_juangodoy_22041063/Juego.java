@@ -5,6 +5,9 @@
  */
 package mariogalaxy_juangodoy_22041063;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author jcgol
@@ -27,25 +30,6 @@ public class Juego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel6 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jl_distancia = new javax.swing.JLabel();
-        jl_jugador = new javax.swing.JLabel();
-        jl_partida = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jl_distanciaR = new javax.swing.JLabel();
-        Estrella = new javax.swing.JLabel();
-        jp_proceso = new javax.swing.JProgressBar();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jt_Juego = new javax.swing.JTable();
-        jb_comenzar = new javax.swing.JButton();
-        jb_pausar = new javax.swing.JButton();
-        jcb_nombre = new javax.swing.JComboBox<>();
-        jb_agregar = new javax.swing.JButton();
-        jcb_estrella = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -77,157 +61,6 @@ public class Juego extends javax.swing.JFrame {
         jtf_velocidad = new javax.swing.JTextField();
         jcb2_partida = new javax.swing.JComboBox<>();
 
-        jPanel6.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel6.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel11.setText("Partida: ");
-
-        jLabel12.setText("Jugador:");
-
-        jLabel13.setText("Distancia Total: ");
-
-        jl_jugador.setBackground(new java.awt.Color(102, 102, 102));
-
-        jl_partida.setText("jLabel4");
-
-        jLabel14.setText("Estrella");
-
-        jLabel15.setText("Distancia Recorrida");
-
-        jl_distanciaR.setText("jLabel6");
-
-        Estrella.setText("jLabel7");
-
-        jt_Juego.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Velocidad", "Estrella", "Distancia", "Estatus"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jt_Juego);
-
-        jb_comenzar.setText("Comenzar");
-
-        jb_pausar.setText("Pausar");
-        jb_pausar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jb_pausarActionPerformed(evt);
-            }
-        });
-
-        jcb_nombre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-
-        jb_agregar.setText("Agregar");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jp_proceso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel12))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jl_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jl_distancia, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(73, 73, 73)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel6Layout.createSequentialGroup()
-                                    .addComponent(jLabel15)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jl_distanciaR))
-                                .addGroup(jPanel6Layout.createSequentialGroup()
-                                    .addComponent(jLabel14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Estrella))))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jb_comenzar, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jb_pausar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jLabel11)
-                            .addGap(33, 33, 33)
-                            .addComponent(jl_partida, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jcb_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jb_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jcb_estrella, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jl_partida))
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(jl_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(Estrella))))
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(jl_distancia, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jl_distanciaR))))
-                .addGap(18, 18, 18)
-                .addComponent(jp_proceso, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_comenzar)
-                    .addComponent(jb_pausar))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcb_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_agregar)
-                    .addComponent(jcb_estrella, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -243,8 +76,10 @@ public class Juego extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Partida");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre Partida:");
 
         jT_nombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -258,12 +93,42 @@ public class Juego extends javax.swing.JFrame {
         });
 
         jcb_partida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        jcb_partida.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcb_partidaItemStateChanged(evt);
+            }
+        });
 
         jb_iniciar.setText("Iniciar");
+        jb_iniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_iniciarMouseClicked(evt);
+            }
+        });
+        jb_iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_iniciarActionPerformed(evt);
+            }
+        });
+        jb_iniciar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jb_iniciarKeyReleased(evt);
+            }
+        });
 
         jb_eliminar.setText("Eliminar Partida");
+        jb_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_eliminarMouseClicked(evt);
+            }
+        });
 
         jb_editar.setText("Editar Partida");
+        jb_editar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_editarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -273,11 +138,10 @@ public class Juego extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jb_editar, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jb_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addComponent(jcb_partida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jb_iniciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jb_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addComponent(jcb_partida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jb_iniciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3)
@@ -311,26 +175,35 @@ public class Juego extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Descripcion");
 
         jt_descripcion.setBackground(new java.awt.Color(255, 255, 255));
         jt_descripcion.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Distancia");
 
         jt_distancia.setBackground(new java.awt.Color(255, 255, 255));
         jt_distancia.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Partida");
 
         jT_nombre1.setBackground(new java.awt.Color(255, 255, 255));
         jT_nombre1.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nombre");
 
         jbc1_partida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
 
         jb_Ecrear.setText("Crear Estrella");
+        jb_Ecrear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_EcrearMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -382,13 +255,21 @@ public class Juego extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 0, 51));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Partida");
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nombre");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Velocidad");
 
         jb2_crear.setText("Crear Jugador");
+        jb2_crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb2_crearMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -480,12 +361,42 @@ public class Juego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearMouseClicked
-        
+        d.crearPartida(jT_nombre.getText());
     }//GEN-LAST:event_jb_crearMouseClicked
 
-    private void jb_pausarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_pausarActionPerformed
+    private void jb_iniciarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jb_iniciarKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_jb_pausarActionPerformed
+    }//GEN-LAST:event_jb_iniciarKeyReleased
+
+    private void jb_iniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_iniciarMouseClicked
+        Gameplay g = new Gameplay();
+        g.setVisible(true);
+        
+    }//GEN-LAST:event_jb_iniciarMouseClicked
+
+    private void jb_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarMouseClicked
+        d.eliminarPartida(jcb_partida.getSelectedIndex());
+    }//GEN-LAST:event_jb_eliminarMouseClicked
+
+    private void jb_editarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_editarMouseClicked
+        d.editarPartida(jcb_partida.getSelectedIndex());
+    }//GEN-LAST:event_jb_editarMouseClicked
+
+    private void jb_EcrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_EcrearMouseClicked
+        d.agregarEstrella(Double.parseDouble(jt_distancia.getText()), jt_descripcion.getText(), jT_nombre1.getText());
+    }//GEN-LAST:event_jb_EcrearMouseClicked
+
+    private void jb2_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb2_crearMouseClicked
+        d.agregarJugador(Double.parseDouble(jtf_velocidad.getText()), jtf_nombre2.getText());
+    }//GEN-LAST:event_jb2_crearMouseClicked
+
+    private void jcb_partidaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcb_partidaItemStateChanged
+        jcb_partida.addItem(d.getName());
+    }//GEN-LAST:event_jcb_partidaItemStateChanged
+
+    private void jb_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_iniciarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_iniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -523,14 +434,8 @@ public class Juego extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Estrella;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -543,34 +448,30 @@ public class Juego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jT_nombre;
     private javax.swing.JTextField jT_nombre1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton jb2_crear;
     private javax.swing.JButton jb_Ecrear;
-    private javax.swing.JButton jb_agregar;
-    private javax.swing.JButton jb_comenzar;
     private javax.swing.JButton jb_crear;
     private javax.swing.JButton jb_editar;
     private javax.swing.JButton jb_eliminar;
     private javax.swing.JButton jb_iniciar;
-    private javax.swing.JButton jb_pausar;
     private javax.swing.JComboBox<String> jbc1_partida;
     private javax.swing.JComboBox<String> jcb2_partida;
-    private javax.swing.JComboBox<String> jcb_estrella;
-    private javax.swing.JComboBox<String> jcb_nombre;
     private javax.swing.JComboBox<String> jcb_partida;
-    private javax.swing.JLabel jl_distancia;
-    private javax.swing.JLabel jl_distanciaR;
-    private javax.swing.JLabel jl_jugador;
-    private javax.swing.JLabel jl_partida;
-    private javax.swing.JProgressBar jp_proceso;
-    private javax.swing.JTable jt_Juego;
     private javax.swing.JTextField jt_descripcion;
     private javax.swing.JTextField jt_distancia;
     private javax.swing.JTextField jtf_nombre2;
     private javax.swing.JTextField jtf_velocidad;
     // End of variables declaration//GEN-END:variables
+   Partida partida = new Partida("Preuba");
+   Jugador jugador1 = new Jugador(5,"Juan");
+   Jugador jugador2 = new Jugador(9,"Klein");
+   Estrella estrella1 = new Estrella(500,"Prueba de este cosa","SUP");
+   Estrella estrella2 = new Estrella(600,"Otra estrela?!","Mo");
+   Datos d;
+   Partida p;
+   Jugador j;
+   Estrella e;
 }

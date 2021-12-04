@@ -10,13 +10,13 @@ package mariogalaxy_juangodoy_22041063;
  * @author jcgol
  */
 public class Partida {
-    private String nombre;
+    private Object nombre;
 
-    public Partida(String nombre) {
+    public Partida(Object nombre) {
         this.nombre = nombre;
     }
 
-    public String getNombre() {
+    public Object getNombre() {
         return nombre;
     }
 
