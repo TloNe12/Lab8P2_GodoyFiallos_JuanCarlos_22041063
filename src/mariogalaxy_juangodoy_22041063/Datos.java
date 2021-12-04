@@ -7,7 +7,7 @@ package mariogalaxy_juangodoy_22041063;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-
+import java.io.EOFException;
 /**
  *
  * @author jcgol
